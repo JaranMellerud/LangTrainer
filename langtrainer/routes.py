@@ -45,18 +45,31 @@ def vocabulary():
     return render_template("vocabulary.html", form=form, vocabulary=vocabulary)
 
 
-@app.route("/practice")
+@app.route("/practice", methods=["POST", "GET"])
 @app.route("/")
 def practice():
     if current_user.is_authenticated is False:
         return redirect(url_for("login"))
-    return render_template("practice.html", title="Practice")
+    vocabulary = WordsDict.query.with_entities(WordsDict.id, WordsDict.native_word, WordsDict.foreign_word).filter_by(words_owner_id=current_user.id)
+    vocabulary_list = []
+    for word in vocabulary:
+        vocabulary_list.append(word)
+    if vocabulary_list == []:
+        return redirect(url_for("vocabulary"))
+    word = random.choice(vocabulary_list)
+    return render_template("practice.html", title="Practice", word=word)
 
+@app.route("/show_word/<int:word_id>", methods=["POST", "GET"])
+def show_word(word_id):
+    if current_user.is_authenticated is False:
+        return redirect(url_for("login"))
+    word = WordsDict.query.with_entities(WordsDict.id, WordsDict.native_word, WordsDict.foreign_word).filter_by(id=word_id)[0]
+    return render_template("show_word.html", word=word)
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():
     if current_user.is_authenticated is True:
-        return redirect(url_for('home'))
+        return redirect(url_for('practice'))
     form = RegistrationForm()
     if form.validate_on_submit():
         user = User(first_name=form.first_name.data, last_name=form.last_name.data, email=form.email.data, password_hash=generate_password_hash(form.password.data), date_registered=datetime.now())

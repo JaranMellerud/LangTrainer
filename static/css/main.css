@@ -357,11 +357,11 @@ footer {
     display: inline-block;
 }
 
-#native-header {
+#native-header-vocabulary {
     margin-left: 15px;
 }
 
-#foreign-header {
+#foreign-header-vocabulary {
     margin-left: 245px;
 }
 
@@ -378,3 +378,49 @@ footer {
    height: 30px;
    cursor: pointer;
 }
+
+/* practice page */
+#practice-container {
+    width: 702px;
+}
+
+.words-area {
+    margin: 0px 30px;
+}
+
+.words-area legend {
+    margin-bottom: 20px;
+}
+
+.word-container {
+    background-color: #979797;
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    text-align: center;
+    border: black 3px solid;
+    border-radius: 15px;
+    position: relative;
+}
+
+.word-container span {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    height: 30%;
+    width: 50%;
+    margin: 0 0 0 -25%;
+    font-size: larger;
+    font-weight: bold;
+    max-width: 50%;
+    word-wrap:break-word;
+}
+
+#word-container-native {
+    margin-right: 30px;
+}
+
+#foreign-header-practice {
+    margin-left: 270px;
+}
+
