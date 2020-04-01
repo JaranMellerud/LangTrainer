@@ -1,0 +1,92 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="user-form" id="vocabulary-form">
+        <form method="POST" action="" novalidate>
+            {{ form.hidden_tag() }}
+            <div class="form-container">
+            <legend class="form-legend">Vocabulary</legend>
+            <div class="vocabulary-section">
+            <!-- if vocabulary is empty, don't show table, only show add word form -->
+            {% if vocabulary.count() == 0 %}
+                <span class="vocab-text">Your vocabulary is empty. Add some words to start training!</span><br><br>
+                <div class="add-words-section">
+                    <div class="form-group">
+                        {% if form.native_word.errors %}
+                            {{ form.native_word(class="form-control word-input is-invalid") }}
+                            {% for error in form.native_word.errors %}
+                                <span class="errorprint">{{ error }}</span>
+                            {% endfor %}
+                        {% else %}
+                            {{ form.native_word(class="form-control word-input", placeholder="Native") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {% if form.foreign_word.errors %}
+                            {{ form.foreign_word(class="form-control word-input is-invalid") }}
+                            {% for error in form.foreign_word.errors %}
+                                <span class="errorprint">{{ error }}</span>
+                            {% endfor %}
+                        {% else %}
+                            {{ form.foreign_word(class="form-control word-input", placeholder="Foreign") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group-btn">
+                        {{ form.add(class="btn add-words-button") }}
+                    </div>
+                </div>
+            {% else %}
+            <!-- if vocabulary is not empty, show words in addition to the add word form -->
+            <div class="table-header">
+                <span id="native-header">Native</span>
+                <span id="foreign-header">Foreign</span>
+            </div>
+            <div class="vocabulary-table">
+                <table>
+                    <!-- each word is constituted of a native part and a foreign part. Creating one table row for each word, with native word and foreign word as table data -->
+                    {% for word in vocabulary %}
+                    <tr>
+                        {% for translation in word %}
+                            {% if loop.index != 1 %}
+                                <td class="table-data">{{ translation }}</td>
+                            {% endif %}
+                        {% endfor %}
+                        <!-- delete button for each word/row -->
+                        <td>
+                            <form action="{{ url_for('delete_word', word_id=word[0]) }}" method="POST">
+                                <input class="delete-btn" type="submit" value="Del">
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <div class="add-words-section">
+                <div class="form-group">
+                    {% if form.native_word.errors %}
+                        {{ form.native_word(class="form-control word-input is-invalid") }}
+                        {% for error in form.native_word.errors %}
+                            <span class="errorprint">{{ error }}</span>
+                        {% endfor %}
+                    {% else %}
+                        {{ form.native_word(class="form-control word-input", placeholder="Native") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {% if form.foreign_word.errors %}
+                        {{ form.foreign_word(class="form-control word-input is-invalid") }}
+                        {% for error in form.foreign_word.errors %}
+                            <span class="errorprint">{{ error }}</span>
+                        {% endfor %}
+                    {% else %}
+                        {{ form.foreign_word(class="form-control word-input", placeholder="Foreign") }}
+                    {% endif %}
+                </div>
+                <div class="form-group-btn">
+                    {{ form.add(class="btn add-words-button") }}
+                </div>
+            {% endif %}
+            </div>
+        </form>
+    </div>
+    </div>
+{% endblock content %}
