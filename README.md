@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ```
 **3.** If you do not have it already, install MySQL on your computer. Log in and create a new database for the app. Then store the database URI in your environment variables with the key name "LANGTRAINER_DB_URI".
 
-**4.** Create a secret key for the application and store it in your environment variables with the key name "LANGTRAINER_SECRET_KEY". This key can be whatever you want.
+**4.** Create a secret key for the application and store it in your environment variables with the key name "LANGTRAINER_SECRET_KEY". You can set the key to whatever you want.
 
 **5.** Run the run.py file to start the application!
 
