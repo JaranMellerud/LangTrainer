@@ -35,9 +35,8 @@ I am learning Russian, and I wanted a very minimalistic and simple flash card ap
 * CSS fundamentals
 
 ## Images
-**Fixed box sizes. Might look small since I have a very big screen.**
-![Register page](https://user-images.githubusercontent.com/56685171/79042391-ccb87280-7bf7-11ea-94a5-46be4098c156.png)
-![Login page](https://user-images.githubusercontent.com/56685171/79042367-8400b980-7bf7-11ea-822f-3a498b1bb4cf.png)
-![Practice page](https://user-images.githubusercontent.com/56685171/79042427-1608c200-7bf8-11ea-8108-c028c0ff8922.png)
-![Practice page](https://user-images.githubusercontent.com/56685171/79042455-4cded800-7bf8-11ea-8173-7d026224a650.png)
-![Vocabulary page](https://user-images.githubusercontent.com/56685171/79042481-831c5780-7bf8-11ea-89cb-9881158eb53f.png)
+![Register page](https://user-images.githubusercontent.com/56685171/79044564-1a3bdc00-7c06-11ea-8d6b-860560dbbb10.png)
+![Login page](https://user-images.githubusercontent.com/56685171/79044591-43f50300-7c06-11ea-8aca-e137c46485ac.png)
+![Practice page](https://user-images.githubusercontent.com/56685171/79044624-70108400-7c06-11ea-9b6d-400594c7c07e.png)
+![Practice page](https://user-images.githubusercontent.com/56685171/79044657-96362400-7c06-11ea-8f29-6263df1bf5b0.png)
+![Vocabulary page](https://user-images.githubusercontent.com/56685171/79044687-be258780-7c06-11ea-90eb-29ff2be98a1f.png)
