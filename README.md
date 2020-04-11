@@ -22,7 +22,8 @@ pip install -r requirements.txt
 
 ## Built With
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/) - The web framework used
-* [SQLAlchemy](https://www.sqlalchemy.org/) - Database Toolkit
+* [MySQL](https://www.mysql.com/) - Database engine
+* [SQLAlchemy](https://www.sqlalchemy.org/) - Database toolkit
 
 ## Why I Made It
 I am learning Russian, and I wanted a very minimalistic and simple flash card app to practice vocabulary. I have been very curious about web development, and since I knew Python from before, I thought making a web application with the Flask framework would be a simple way to take a step into web development world. For my next web development project I will definetely not use Flask, but one of the JavaScript frameworks.
