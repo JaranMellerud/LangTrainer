@@ -35,4 +35,8 @@ I am learning Russian, and I wanted a very minimalistic and simple flash card ap
 * CSS fundamentals
 
 ## Images
-![Alt text](/screenshots/screenshot2.png?raw=true "Register Page")
+![Register page](https://user-images.githubusercontent.com/56685171/79042391-ccb87280-7bf7-11ea-94a5-46be4098c156.png)
+![Login page](https://user-images.githubusercontent.com/56685171/79042367-8400b980-7bf7-11ea-822f-3a498b1bb4cf.png)
+![Practice page](https://user-images.githubusercontent.com/56685171/79042427-1608c200-7bf8-11ea-8108-c028c0ff8922.png)
+![Practice page](https://user-images.githubusercontent.com/56685171/79042455-4cded800-7bf8-11ea-8173-7d026224a650.png)
+![Vocabulary page](https://user-images.githubusercontent.com/56685171/79042481-831c5780-7bf8-11ea-89cb-9881158eb53f.png)
