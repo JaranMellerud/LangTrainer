@@ -31,7 +31,7 @@ I am learning Russian, and I wanted a very minimalistic and simple flash card ap
 ## What I have learned
 * Flask fundamentals
 * Creating and querying databases in MySQL
-* Using SQLAlchemy in combination with flask-forms to database via html forms in Flask
+* Using SQLAlchemy in combination with flask-forms to add data to database via html forms in Flask
 * HTML fundamentals (structure, forms, tables)
 * CSS fundamentals
 
